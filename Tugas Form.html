@@ -11,7 +11,7 @@
                 flex-direction: column;
                 align-items: center;
             }
-            label, .input-field, .input-file, textarea, .margin {
+            textarea{
                 margin-bottom: 14px;
             }
             label {
@@ -39,6 +39,8 @@
                 font-weight: 700;
                 padding: 0px 10px;
                 color: #a9d2ff;
+                text-shadow: #8d8d8d 2px 3px 0px;
+                
             }
             textarea{
                 border-radius: 9px;
@@ -46,6 +48,16 @@
                 border-style: solid;
                 border-color: #ccc;
                 font-family: "Montserrat", sans-serif;
+            }
+            button{
+                background-color: #fcc034;
+                border: none;
+                border-radius: 12px;
+                padding: 10px 30px;
+                font-size: 18px;
+                font-weight: 800;
+                font-family: "Montserrat", sans-serif;
+                cursor: pointer;
             }
             body{
                 background-color: rgb(3, 17, 62);
@@ -62,7 +74,6 @@
     </head>
     <body>
         <div class="container">
-        <!-- <h1>NIM: 069</h1> -->
 
         <fieldset>
             <legend>
@@ -71,48 +82,93 @@
             <h1>Form Daftar Anggota UKM AFO</h1>
             <h2>Data Diri</h2>
             <form action="">
-            <label for="nama">Nama Lengkap:</label>
-            <input class="input-field" type="text" name="nama" required>
-            <br>
-            <label for="nim">NIM:</label>
-            <input class="input-field" type="number" name="nim" required>
-            <br>
-            <label for="angkatan">Angkatan:</label>
-            <input class="input-field" type="number" name="angkatan" required>
-            <br>
-            <label for="prodi">Program Studi:</label>
-            <input class="input-field" type="text" name="prodi" required>
-            <br>
-            <label for="kampus">Kampus:</label>
-            <input type="radio" name="kampus" value="Ketintang">Ketintang
-            <input type="radio" name="kampus" value="Lidah Wetan">Lidah Wetan
+            <table cellpadding="3">
+                <tr>
+                    <td>
+                        <label for="nama">Nama Lengkap:</label>
+                    </td>
+                    <td>
+                        <input class="input-field" type="text" id="nama" name="nama" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nim">NIM:</label>
+                    </td>
+                    <td>
+                        <input class="input-field" type="number" id="nim" name="nim" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="angkatan">Angkatan:</label>
+                    </td>
+                    <td>
+                        <input class="input-field" type="number" id="angkatan" name="angkatan" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prodi">Program Studi:</label>
+                    </td>
+                    <td>
+                        <input class="input-field" type="text" id="prodi" name="prodi" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="kampus">Kampus:</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="kampus" value="Ketintang">Ketintang
+                        <input type="radio" name="kampus" value="Lidah Wetan">Lidah Wetan
+                    </td>
+                </tr>
+            </table>
             <br>
             <hr>
-
             <h2>Unggah Berkas</h2>
-            <label for="ktm">KTM:</label>
-            <input class="input-file" type="file" name="ktm" required>
-            <br>
-            <label for="foto">Foto:</label>
-            <input class="input-file" type="file" name="foto" required>
-            <br>
-            <label for="ktp">KTP:</label>
-            <input class="input-file" type="file" name="ktp" required>
+            <table cellpadding="3">
+                <tr>
+                    <td>
+                        <label for="ktm">KTM:</label>
+                    </td>
+                    <td>
+                        <input class="input-file" type="file" id="ktm" name="ktm" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="foto">Foto:</label>
+                    </td>
+                    <td>
+                        <input class="input-file" type="file" id="foto" name="foto" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ktp">KTP:</label>
+                    </td>
+                    <td>
+                        <input class="input-file" type="file" id="ktp" name="ktp" required>
+                    </td>
+                </tr>
+            </table>
             <br>
             <hr>
 
             <h2>Kuesioner</h2>
             <label for="device">Device yang digunakan:</label>
             <div >
-                <input name="device" type="checkbox" value="HP">HP
-                <input name="device" type="checkbox" value="DSLR">DSLR
-                <input name="device" type="checkbox" value="Mirrorless">Mirrorless
+                <input name="device" id="device" type="checkbox" value="HP">HP
+                <input name="device" id="device" type="checkbox" value="DSLR">DSLR
+                <input name="device" id="device" type="checkbox" value="Mirrorless">Mirrorless
             </div>
             <br>
             <label for="alasan">Alasan mengikuti UKM ini</label>
             <textarea name="alasan" rows="2" cols="50"></textarea>
             <br>
-            <input type="submit" value="Daftar">
+            <button type="submit">Daftar</button>
             </form>
         </fieldset>
         </div>
