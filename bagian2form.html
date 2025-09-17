@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+    </head>
+    <style>
+        .nolgram{
+            vertical-align: top;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 100px;
+        }
+    </style>
+    <body>
+        <div class="container">
+        <h1>NIM: 069</h1>
+        <form action="/bagian2form" method="post">
+            <label for="username">Masukkan username:</label>
+            <input type="text" name="username">
+            <br>
+            <label for="password">Masukkan password:</label>
+            <input type="password" name="password">
+            <br>
+            <label for="Email">Masukkan Email:</label>
+            <input type="email" name="Email">
+            <br>
+            <label for="Gaji">Masukkan Gaji:</label>
+            <input type="number" name="Gaji">
+            <br>
+            <label for="Date">Masukkan Tanggal:</label>
+            <input type="date" name="Date">
+            <br>
+            <label for="KTP">Upload KTP</label>
+            <input type="file" name="KTP">
+            <br>
+            <label for="Hobi">Masukkan Hobi:</label>
+            <input type="checkbox" name="Hobi" id="hobbies" value="Membaca">Baca Buku
+            <input type="checkbox" name="Hobi" id="hobbies" value="Berenang">Berenang
+            <input type="checkbox" name="Hobi" id="hobbies" value="Bersepeda">Bersepeda
+            <br>
+            <label for="jk">Masukkan Jenis Kelamin:</label>
+            <input type="radio" name="jk" value="Laki-laki">Laki-laki
+            <input type="radio" name="jk" value="Perempuan">Perempuan
+            <br>
+            <label for="baju">Masukkan Ukuran Baju:</label>
+            <select name="baju">
+                <option value="s">Smol</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+            </select>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        </div>
+    </body>
+</html>
