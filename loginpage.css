@@ -8,6 +8,9 @@ h1{
     color: rgb(62, 62, 224);
     margin: 0;
 }
+hr {
+    color: black;
+}
 input{
     border-width: 1px;
     border-style: solid;
@@ -29,6 +32,7 @@ button{
     border: solid 2px;
     border-color: rgb(21, 211, 100);
     border-radius: 8px;
+    color: rgb(73, 73, 73);
 }
 .container {
     min-width: 100%;
@@ -54,6 +58,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 25px;
