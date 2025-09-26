@@ -1,0 +1,61 @@
+body{
+    font-family: Montserrat;
+    margin: 0;
+}
+h1{
+    font-weight: 700;
+    font-size:52px;
+    color: rgb(62, 62, 224);
+    margin: 0;
+}
+input{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(62, 62, 224);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    /* margin: 5px; */
+}
+input:active, input:focus {
+    outline: none;
+    border-color: rgb(30, 30, 200);
+    box-shadow: 0 0 5px rgba(30, 30, 200, 0.5);
+}
+button{
+    min-width: 99%;
+    height: 35px;
+    background-color: rgb(17, 255, 116);
+    border: solid 2px;
+    border-color: rgb(21, 211, 100);
+    border-radius: 8px;
+}
+.container {
+    min-width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    margin-top: 60px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    gap: 0px;
+}
+.login-container {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
