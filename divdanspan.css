@@ -1,0 +1,21 @@
+body{
+    background-image: url("cool kid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Montserrat;
+
+}
+.container {
+    min-width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kotak{
+    background: linear-gradient(to left, #ff7e5f, #feb47b);
+    color: white;
+    border: 3px solid white;
+    margin: 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
