@@ -1,0 +1,80 @@
+*, html, body{
+    font-family: Montserrat;
+    margin: 0;
+    font-size: 16px;
+}
+body{
+    background-color: rgb(13, 12, 20);
+}
+hr{
+    width: 300px;
+    justify-self: center;
+    text-align: center;
+}
+h1{
+    font-size: xx-large;
+}
+h3{
+    font-size: large;
+    text-align: center;
+}
+.container {
+    min-width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cv-page{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    min-width: 900px;
+    margin-top: 30px;
+    /* padding: 30px 0px 30px 0px; */
+}
+.main-content{
+    background-color: rgb(252, 251, 255);
+    padding: 20px 20px 20px 40px;
+    max-width: 500px;
+    border-radius: 20px 0px 0px 20px;
+}
+.main-content>div{
+    min-width: 470px;
+    margin: 10px 0px 10px 0px
+}
+.main-content>div>h3{
+    text-align: left;
+}
+.main-content>div>hr{
+    width: 95%;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 380px;
+    margin: 30px 0px 30px 0px;
+}
+.material-symbols-outlined{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: -0.2em;
+    justify-self:center;
+}
+.side-content{
+    justify-items: left;
+    text-align: left;
+}
+.side-content>div{
+    padding: 15px 0px 15px 0px;
+    line-height: 1.7em;
+    min-width: 300px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
