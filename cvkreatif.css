@@ -15,7 +15,7 @@ h1{
     font-size: xx-large;
 }
 h3{
-    font-size: large;
+    font-size: x-large;
     text-align: center;
 }
 .container {
@@ -40,7 +40,8 @@ h3{
 }
 .main-content>div{
     min-width: 470px;
-    margin: 10px 0px 10px 0px
+    margin: 10px 0px 10px 0px;
+    line-height: 1.7em;
 }
 .main-content>div>h3{
     text-align: left;
