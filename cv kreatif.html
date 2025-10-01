@@ -3,21 +3,127 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e3e755aaff.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_name=engineering,sentiment_satisfied,psychology,sprint,hr_resting" />
     <link rel="stylesheet" href="cvkreatif.css">
     <title>CV Arya Satwika</title>
+    <style>
+        *, html, body{
+            font-family: Montserrat;
+            margin: 0;
+            font-size: 16px;
+        }
+        html>body{
+            background-color: rgb(13, 12, 20);
+        }
+        p, strong, li{
+            font-family: Poppins;
+        }
+        hr{
+            width: 300px;
+            justify-self: center;
+            text-align: center;
+            border: solid 0.7px;
+            border-radius: 100%;
+            border-color: rgb(141, 198, 255);
+            margin: 5px 0px 10px 0px;
+        }
+        h1{
+            font-size: xx-large;
+        }
+        h3{
+            font-size: x-large;
+            text-align: center;
+        }
+        .container {
+            min-width: 100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cv-page{
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(135, 167, 247);
+            min-width: 900px;
+            margin-top: 30px;
+            /* padding: 30px 0px 30px 0px; */
+        }
+        .main-content{
+            background-color: rgb(252, 251, 255);
+            padding: 20px 20px 20px 40px;
+            border-radius: 20px 0px 0px 20px;
+            box-shadow: -10px 0px 2px rgba(39, 12, 79, 0.3);
+            max-width: 500px;
+        }
+        .main-content>div{
+            min-width: 470px;
+            margin: 10px 0px 10px 0px;
+            line-height: 1.7em;
+        }
+        .main-content>div>h3{
+            text-align: left;
+        }
+        .main-content>div>hr{
+            justify-self: left;
+            width: 95%;
+        }
+        .left-side{
+            background-color: rgb(135, 167, 247);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 380px;
+            /* border-radius: 0px 20px 20px 0px; */
+            /* box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2); */
+            padding: 30px 0px 30px 0px;
+        }
+        .material-symbols-outlined{
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1;
+            vertical-align: -0.2em;
+            justify-self:center;
+        }
+        .side-content{
+            justify-items: left;
+            text-align: left;
+            color: rgb(15, 9, 44);
+        }
+        .side-content>div{
+            padding: 15px 0px 15px 0px;
+            line-height: 1.7em;
+            width: 100%;
+            min-width: 300px;
+        }
+        .side-content>div>hr{
+            border-color: rgb(242, 249, 255);
+        }
+
+        .text-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #profile>img{
+            border-radius: 50%;
+            border: solid 5px rgb(242, 249, 255);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        span>img{
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="cv-page">
         <div class="left-side">
             <div id="profile">
-                <h1>Arya Satwika</h1>
-                <!-- <img src="https://avatars.githubusercontent.com/u/181611378?v=4" width="250px" alt="foto profil"> -->
+                <h1 style="margin-bottom: 10px;">Arya Satwika</h1>
+                <img src="https://avatars.githubusercontent.com/u/181611378?v=4" width="250px" alt="foto profil">
             </div>
-            <br>
             <br>
             <div class="side-content">
                 <div>
@@ -25,7 +131,7 @@
                 <hr>
                 <p><span class="material-symbols-outlined">mail</span> 24051204069@mhs.unesa.ac.id</p>
                 <p><span class="material-symbols-outlined">phone</span> +62 812-2115-225</p>
-                <p>github.com/arya-satwika</p>
+                <p><span><img width="20" src="github-svg.svg" alt=""></span> github.com/arya-satwika</p>
                 </div>
                 
                 <div>
@@ -38,7 +144,7 @@
 
                 <div>
                 <h3>Keahlian</h3>
-                <hr>
+                <hr style="color: aqua;">
                 <p><span class="material-symbols-outlined">engineering</span>
                     Pekerja Keras</p>
                 <p><span class="material-symbols-outlined">hr_resting</span>
@@ -54,7 +160,7 @@
         </div>
         <div class="main-content">
             <div id="profile">
-                <h3>Profil</h3>
+                <h3 style="margin-top: 20px;">Profil</h3>
                 <hr>
                 <p>Saya adalah seorang mahasiswa Teknik Informatika di Universitas Negeri Surabaya. 
                     Saya memiliki minat yang besar dalam pengembangan perangkat lunak dan desain web.

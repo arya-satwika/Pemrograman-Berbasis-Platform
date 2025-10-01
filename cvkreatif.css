@@ -3,13 +3,20 @@
     margin: 0;
     font-size: 16px;
 }
-body{
+html>body{
     background-color: rgb(13, 12, 20);
+}
+p, strong, li{
+    font-family: Poppins;
 }
 hr{
     width: 300px;
     justify-self: center;
     text-align: center;
+    border: solid 0.7px;
+    border-radius: 100%;
+    border-color: rgb(141, 198, 255);
+    margin: 5px 0px 10px 0px;
 }
 h1{
     font-size: xx-large;
@@ -27,7 +34,7 @@ h3{
 .cv-page{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: rgb(135, 167, 247);
     min-width: 900px;
     margin-top: 30px;
     /* padding: 30px 0px 30px 0px; */
@@ -35,8 +42,9 @@ h3{
 .main-content{
     background-color: rgb(252, 251, 255);
     padding: 20px 20px 20px 40px;
-    max-width: 500px;
     border-radius: 20px 0px 0px 20px;
+    box-shadow: -10px 0px 2px rgba(39, 12, 79, 0.3);
+    max-width: 500px;
 }
 .main-content>div{
     min-width: 470px;
@@ -47,15 +55,18 @@ h3{
     text-align: left;
 }
 .main-content>div>hr{
+    justify-self: left;
     width: 95%;
 }
 .left-side{
-    background-color: rgb(255, 247, 175);
+    background-color: rgb(135, 167, 247);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     min-width: 380px;
+    /* border-radius: 0px 20px 20px 0px; */
+    /* box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2); */
     padding: 30px 0px 30px 0px;
 }
 .material-symbols-outlined{
@@ -68,11 +79,16 @@ h3{
 .side-content{
     justify-items: left;
     text-align: left;
+    color: rgb(15, 9, 44);
 }
 .side-content>div{
     padding: 15px 0px 15px 0px;
     line-height: 1.7em;
+    width: 100%;
     min-width: 300px;
+}
+.side-content>div>hr{
+    border-color: rgb(242, 249, 255);
 }
 
 .text-container{
@@ -80,6 +96,11 @@ h3{
     flex-direction: row;
     justify-content: space-between;
 }
-img{
+#profile>img{
     border-radius: 50%;
+    border: solid 5px rgb(242, 249, 255);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+span>img{
+    vertical-align: middle;
 }
