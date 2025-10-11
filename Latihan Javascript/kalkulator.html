@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Kalkulator</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .calculator {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    #display {
+      width: 240px;
+      height: 50px;
+      text-align: right;
+      font-size: 24px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      background: rgba(255,255,255,0.8);
+      color: #333;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+
+    button {
+      height: 60px;
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kalkulator Sederhana</h1>
+  <div class="calculator">
+    <input type="text" id="display" placeholder="0" readonly>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+
+      <button>0</button>
+      <button>.</button>
+      <button>=</button>
+      <button>+</button>
+    </div>
+  </div>
+
+  <footer>Isi bagian JavaScript untuk membuat tombol bekerja 🔢</footer>
+
+  <script>
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('button');
+    let angka=0;
+    let angkaArr=[];
+    let operator='';
+    let result=10;
+    let koma=false;
+    buttons.forEach(button => {
+      button.addEventListener('click', ()=> {
+        const buttonValue = button.textContent;
+        if (buttonValue !== '+' && buttonValue !== '-' && buttonValue !== '*' && buttonValue !== '/' && buttonValue !== '=' && buttonValue !== '.') {
+          if((display.value === '0' || angka === 0 || display.value === 'Error') && operator === ''){
+            if(koma === false){
+              angka = Number(buttonValue);
+              display.value = buttonValue;
+            }else{
+              angka = Number('0.' + buttonValue);
+              display.value = '0.' + buttonValue;
+              koma = false;
+            }
+          }
+          else{
+            if (koma === true){
+              angka = Number(angka + '.' + buttonValue);
+              display.value += buttonValue;
+              koma = false;
+            }else{
+              angka = angka*10 + Number(buttonValue);
+              display.value = display.value + buttonValue;
+            }
+          }
+        } else if (buttonValue === '='){
+          if (operator === '+'){
+            result = angkaArr[0] + angka;
+          }
+          else if (operator === '-'){
+            result = angkaArr[0] - angka;
+          }
+          else if (operator === '*'){
+            result = angkaArr[0] * angka;
+          }
+          else if (operator === '/'){
+            result = angkaArr[0] / angka;
+          }
+          display.value = result.toString();
+          angka = result;
+          angkaArr = [];
+          operator = '';
+        }else if (buttonValue === '.'){
+          if (koma === true){
+            alert('Koma sudah ada');
+            display.value = 'Error';
+            angkaArr = [];
+            operator = '';
+            angka = 0;
+            koma = false;
+          }else{
+            display.value += '.';
+            koma = true;
+          }
+        }else {
+          if (operator !== ''){
+            alert('Operator sudah ada');
+            display.value = 'Error';
+            angkaArr = [];
+            operator = '';
+            angka = 0;
+          }else {
+            angkaArr.push(angka)
+            operator = buttonValue;
+            angka= 0;
+            display.value += buttonValue;
+          }
+        }
+      })
+    })
+  </script>
+
+</body>
+</html>
